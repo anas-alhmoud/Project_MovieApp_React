@@ -16,9 +16,17 @@ import { useHistory } from "react-router-dom";
 import { useDispatch } from 'react-redux'
 import setMovie from '../action'
 
+import { useTranslation, Trans } from "react-i18next"
+
+const lngs = {
+    en: { language: "English" },
+    ar: { language: "العربية" },
+  }
+
 const SearchForMovies = props => {
     const [searchState, setSearchState] = useState("")
     const [movieListState, setMovieListState] = useState([]);
+    const { i18n } = useTranslation();
 
     const search = async () => {
         try{
@@ -43,14 +51,22 @@ const SearchForMovies = props => {
     return (
         <Box mt={5} textAlign={"center"}>
             <Typography variant="h3">
+            <Trans i18nKey="tabTow"> 
                 Search for movies
+                </Trans>
             </Typography>
             <br/>
+
             <Box display="flex" justifyContent="space-around" style={{ width: 700, margin: "auto" }}>
+
                 <TextField value={searchState} onChange={(e) => setSearchState(e.target.value)} variant="outlined" style={{ width: 600 }}/>
-                <Button color="primary" variant="contained" onClick={search}>
+                    <Button color="primary" variant="contained" onClick={search}>
+                    <Trans i18nKey="serBot"> 
+
                     Search
+                    </Trans>
                 </Button>
+                
             </Box>
             <Box display="flex" flexWrap="wrap" justifyContent="space-around">
             { movieListState.length > 1 &&
