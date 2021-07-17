@@ -42,7 +42,7 @@ We implement web application that will allow the user to do the following :muscl
 
 <br>
 
- ## Example about a short story of Development process and problem-solving strategy:
+ ## Example about a short story of Development process and problem-solving strategy :punch: :
 
 
 As a part of our project, we have favorite movies feature that allows the user to favorite unlimited numbers of movies. However, this feature would have a problem with the way that it works(favorite a movie from the main page Route and show the result of the favorites in a different Route). As a solution, we have decided as a team to solve the problem by using Redux. Redux works as storage that allows us to keep the record of the favorite movies through all the routes. 
