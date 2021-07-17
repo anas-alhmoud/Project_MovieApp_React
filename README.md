@@ -1,50 +1,76 @@
 
-# Group Project Movie App
+# Group Project Movie App (SAR :smile: سَار)
 
-you are required as a group to create Movie App and to get the data about movies from TheMovieDB APIs.
+We worked on this project as a group to create Movie App, get the data about movies from TheMovieDB APIs.
 https://api.themoviedb.org
 
+<br/>
 
-## Requirements(Read them Carefully!)
+## Wireframes and User Stories:
 
-You are required to implement web application that will allow the user to do the following
+### User Stories:
+We implement web application that will allow the user to do the following :muscle: :white_check_mark:
 
-### React
-- Must use Redux with at least two actions
-- Must at least use 3 React hooks useState, useEffect, and useContext
-- Must be in English and Arabic using react-i18next
+- As a user, I can see the latest movies. 
+- As a user, I can search movies. 
+- As a user, I can add a movie or remove it from my favorites.(must use Redux here) 
+- As a user, I can see movie details (Movie Name, Poster, Movie Description, Genres) 
 
-### user stories:
-- As a user, I can see the latest movies.
-- As a user, I can search movies.
-- As a user, I can add a movie or remove it from my favorites.(must use Redux here)
-- As a user, I can see movie details (Movie Name, Poster, Movie Description, Genres)
+
+### Wireframes:
+<p>You can view application wireframe <a href="https://wireframe.cc/pro/pp/196278942458114" rel="nofollow">here</a></p> 
+
+### Deployment: 
+
+ :paperclip: <a href="......" rel="nofollow">Movie App</a>
+
+
+
+<br/>
+
+
+## Technologies :
+
+### -  React & Redux:
+- Must use Redux with at least two actions :white_check_mark:
+- Must at least use 3 React hooks useState, useEffect, and useContext :white_check_mark:
+- Must be in English and Arabic using react-i18next :white_check_mark:
+- Using JS Libraries (axios , i18next, react-router-dom):white_check_mark:
+
+### - MATERIAL-UI
+### - JSX & CSS
+
+<br>
+
+ ## Example about a short story of Development process and problem-solving strategy :punch: :
+
+
+As a part of our project, we have favorite movies feature that allows the user to favorite unlimited numbers of movies. However, this feature would have a problem with the way that it works(favorite a movie from the main page Route and show the result of the favorites in a different Route). As a solution, we have decided as a team to solve the problem by using Redux. Redux works as storage that allows us to keep the record of the favorite movies through all the routes. 
+
+<br/>
+
+### Get Started:
+
+```terminal
+  $ git clone https://github.com/anas-alhmoud/Project_MovieApp_React.git
+
+  
+  $ npm install
+  $ npm start
+```
+
+
+
+
+
+
+
+### As a Future Work :bulb: :mag_right: : 
 - As a user, I can share movie link to IMDB site.
 - As a user, I can see similar movies for each movie.
 - As a user, I can see as more movie details (Cast names and posters).
 - As a user, I can see star details with the list of movies casted in.
-
-### README
-- List technologies used
-- Link to wireframes and user stories.
-- Document your planning and tell a story about your development process and problem-solving strategy.
-- List unsolved problems which would be fixed in future iterations.
-- Describe how some of your favorite functions work
-
-## Note
-
-1- You are required to register an account to generate API Key. https://www.themoviedb.org/faq/api
-
-2- API documentation is found here example: https://developers.themoviedb.org/3
-
-## Deliverable 
-- A **working website, built by your Group**
-- A **link to your hosted working website** in the URL section of your Github repository
-- A **git repository hosted on Github**, with a link to your hosted website, and frequent commits from each member of the team.
-
-## Bonus 
-
-- Firebase Auth with useContext https://firebase.google.com/docs/auth
+- Use Firebase Auth with useContext https://firebase.google.com/docs/auth
 
 - Use localStorage with Redux
 
@@ -52,6 +78,13 @@ You are required to implement web application that will allow the user to do the
 - Use React Native as your FrontEnd in addition to your web application
 
 
-## Due Date
+<br>
 
-On Sunday 2021/07/18 at 9:00 am.
+## Developers :fire: :
+
+ Anas Alhmoud
+ ➝ [@anas-alhmoud](https://github.com/anas-alhmoud)
+
+Riyad Alghamdi ➝ [@1Riyad](https://github.com/1Riyad)
+
+ Samirah Alhusayni ➝ [@SamirahAlhusayni](https://github.com/SamirahAlhusayni)
