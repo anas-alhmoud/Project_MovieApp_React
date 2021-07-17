@@ -9,6 +9,7 @@ i18n.use(initReactI18next).use(LanguageDetector).init({
         translation: {
           tabOne: " Popular movies",
           tabTow: "Search for movies",
+          tabThree: "Favorite Movies",
           serBot: "Search",
    
         },
@@ -17,6 +18,7 @@ i18n.use(initReactI18next).use(LanguageDetector).init({
         translation: {
             tabOne: " أحدث الأفلام",
             tabTow: "البحث عن أفلام",
+            tabThree: "المفضلة",
             serBot: "بحث",
      
 

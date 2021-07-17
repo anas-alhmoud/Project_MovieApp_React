@@ -1,42 +1,39 @@
 import { useState, useEffect } from "react";
-import axios from 'axios';
-
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-
 import { useHistory } from "react-router-dom";
+import { useDispatch,useSelector } from 'react-redux'
+import setMovie, {FavoriteRemoved} from '../action'
 
-import { useDispatch } from 'react-redux'
-import setMovie, {FavoriteAdded} from '../action'
+const FavoriteMovies = props => {
 
-const PopularMovies = props => {
-
+    
     const dispatch = useDispatch()
     const history = useHistory();
+    const favoriteList = useSelector(state => state.favoriteList)
 
     const [movieListState, setMovieListState] = useState([]);
     useEffect(async () => {
-        let res = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=a7a1ed8342890174da1fe4df3aa911b2")
-        setMovieListState(
-            res.data.results
+       setMovieListState(
+            favoriteList
         )
-    }, [])
+    }, [favoriteList])
 
     function showDetails(movie){
         dispatch(setMovie(movie))
         history.push("/details")
     }
 
-    function addFavoriteMovie(movie){
-        dispatch(FavoriteAdded(movie))
-        console.log(movie);
+    function removeFavorited(movie){
+        dispatch(FavoriteRemoved(movie.id))
     }
 
     return (
+        <>
         <Box display="flex" flexWrap="wrap" justifyContent="space-around">
             {
         movieListState.map(movie => (
@@ -57,7 +54,7 @@ const PopularMovies = props => {
                     </CardContent>
                 </CardActionArea>
                 <CardActionArea  >
-                <button type="button" class="btn btn-outline-danger" onClick={() => addFavoriteMovie(movie)}>❤</button>
+                <button type="button" class="btn btn-outline-dark" onClick={() => removeFavorited(movie)}>x</button>
                 </CardActionArea>
                 <br/>
             </Card>
@@ -66,8 +63,7 @@ const PopularMovies = props => {
         )
 }
         </Box>
+        </>
 
-    )
-}
-
-export default PopularMovies
+)}
+export default FavoriteMovies
