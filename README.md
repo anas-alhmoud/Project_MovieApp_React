@@ -65,7 +65,7 @@ As a part of our project, we have favorite movies feature that allows the user t
 
 
 
-### As a Future Work : :bulb: :mag_right:
+### As a Future Work :bulb: :mag_right: : 
 - As a user, I can share movie link to IMDB site.
 - As a user, I can see similar movies for each movie.
 - As a user, I can see as more movie details (Cast names and posters).
@@ -80,7 +80,7 @@ As a part of our project, we have favorite movies feature that allows the user t
 
 <br>
 
-## Developers :fire:
+## Developers :fire: :
 
  Anas Alhmoud
  ➝ [@anas-alhmoud](https://github.com/anas-alhmoud)
