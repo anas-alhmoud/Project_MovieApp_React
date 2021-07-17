@@ -3,7 +3,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 
 const MovieDetails = props => {
-    const movie = useSelector(state => state)
+    const movie = useSelector(state => state.movieReducer)
     return (
         <Box display="flex" width={1600} margin={"auto"} mt={5}>
             <img src={"https://image.tmdb.org/t/p/original" + movie.poster_path} height={600} />
