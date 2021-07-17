@@ -6,7 +6,7 @@ const MovieDetails = props => {
     const movie = useSelector(state => state.movieReducer)
     return (
         <Box display="flex" width={1600} margin={"auto"} mt={5}>
-            <img src={"https://image.tmdb.org/t/p/original" + movie.poster_path} height={600} />
+            <img src={"https://image.tmdb.org/t/p/original" + movie.poster_path} height={600} alt="movie"/>
             <Box ml={5} mt={5}>
                 <Typography variant="h3">
                     {movie.title}

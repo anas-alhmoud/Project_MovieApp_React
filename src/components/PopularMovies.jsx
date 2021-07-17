@@ -19,11 +19,13 @@ const PopularMovies = props => {
     const history = useHistory();
 
     const [movieListState, setMovieListState] = useState([]);
-    useEffect(async () => {
-        let res = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=a7a1ed8342890174da1fe4df3aa911b2")
-        setMovieListState(
-            res.data.results
-        )
+    useEffect(() => {
+        (async () =>{
+            let res = await axios.get("https://api.themoviedb.org/3/movie/popular?api_key=a7a1ed8342890174da1fe4df3aa911b2")
+            setMovieListState(
+                res.data.results
+            )
+        })();
     }, [])
 
     function showDetails(movie){

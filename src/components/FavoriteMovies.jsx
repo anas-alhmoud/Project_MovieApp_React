@@ -17,7 +17,7 @@ const FavoriteMovies = props => {
     const favoriteList = useSelector(state => state.favoriteList)
 
     const [movieListState, setMovieListState] = useState([]);
-    useEffect(async () => {
+    useEffect(() => {
        setMovieListState(
             favoriteList
         )

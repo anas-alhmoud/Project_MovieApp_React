@@ -8,7 +8,7 @@ export default function favoriteList(state = [], action) {
         case"FavoriteRemoved":
         let updatedState = [...state]
         updatedState.forEach((movie,index) => {
-            if (movie.id == action.payload){
+            if (movie.id === action.payload){
                 updatedState.splice(index, 1)
             }
         });

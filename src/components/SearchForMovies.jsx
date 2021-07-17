@@ -16,17 +16,11 @@ import { useHistory } from "react-router-dom";
 import { useDispatch } from 'react-redux'
 import setMovie from '../action'
 
-import { useTranslation, Trans } from "react-i18next"
-
-const lngs = {
-    en: { language: "English" },
-    ar: { language: "العربية" },
-  }
+import { Trans } from "react-i18next"
 
 const SearchForMovies = props => {
     const [searchState, setSearchState] = useState("")
     const [movieListState, setMovieListState] = useState([]);
-    const { i18n } = useTranslation();
 
     const search = async () => {
         try{

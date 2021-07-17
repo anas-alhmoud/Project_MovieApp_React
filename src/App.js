@@ -64,7 +64,7 @@ function App() {
 
           
               key={lng}
-              style={{ fontWeight: i18n.language === lng ? "bold" : "normal"  }, {marginLeft:"50px"}, {color: "inherit"}}
+              style={{ fontWeight: i18n.language === lng ? "bold" : "normal" , marginLeft:"50px", color: "inherit"}}
               type="submit"
               onClick={() => i18n.changeLanguage(lng)}
             >
